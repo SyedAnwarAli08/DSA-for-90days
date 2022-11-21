@@ -13,7 +13,9 @@ public class minSumSubArray {
                 System.out.println(totalMin);
             }
         }
+        System.out.println("Hello world");
         System.out.println(totalMin);
+        
 
     }
 }
