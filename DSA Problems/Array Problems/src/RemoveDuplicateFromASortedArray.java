@@ -1,4 +1,3 @@
-import java.sql.Array;
 import java.util.Arrays;
 //given {2,2,3,4,4,7}
 /*i=0,j=1
