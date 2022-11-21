@@ -1,20 +1,33 @@
 public class minSumSubArray {
+/*
+ * FOR REVISION
+ * smallestSumSubarr(arr, n)
+    Initialize min_ending_here = INT_MAX
+    Initialize min_so_far = INT_MAX
+    
+    for i = 0 to n-1
+        if min_ending_here > 0
+            min_ending_here = arr[i]        
+        else
+            min_ending_here += arr[i]
+        min_so_far = min(min_so_far, min_ending_here)
+
+    return min_so_far
+ * 
+ */
+
+
     public static void main(String[] args) {
         int arr[] ={3, -4, 2, -3, -1, 7, -5};
-        int totalMin = arr[0];
-        int currentMin =totalMin;
-        for (int i=1,j=0;i< arr.length;i++){
-            if (currentMin+arr[i]>=0){
-                System.out.println("currentmain = "+currentMin);
-                currentMin=0;
-            }
-            else {totalMin = Math.min(totalMin,currentMin+arr[i]);
-                currentMin += arr[i];
-                System.out.println(totalMin);
-            }
+        int MinimumTillNow=Integer.MAX_VALUE;
+        for(int i=0,currentValue=Integer.MAX_VALUE;i<arr.length;i++){
+               if(currentValue>0){
+                currentValue = arr[i];
+               } else{
+                currentValue+=arr[i];
+               }
+               MinimumTillNow = Math.min(MinimumTillNow, currentValue);
         }
-        System.out.println(totalMin);
-        
-
+System.out.println(MinimumTillNow);
     }
 }
